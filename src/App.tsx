@@ -1,4 +1,6 @@
-import { ObjetosLiterales } from "./typescript/ObjetosLiterales"
+// import { ObjetosLiterales } from "./typescript/ObjetosLiterales"
+
+import { Funciones } from "./typescript/Funciones"
 
 // import { TiposBasicos } from './typescript/TiposBasicos';
 const App = () => {
@@ -7,7 +9,8 @@ const App = () => {
       <h1>Introducción a TS-React</h1>
       <hr />
       {/* <TiposBasicos /> */}
-      <ObjetosLiterales/>
+      {/* <ObjetosLiterales/> */}
+      <Funciones/>
     </div>
   )
 }

@@ -1,5 +1,18 @@
+interface Persona{
+  nombreCOmpleto:string;
+  nombre:string;
+  edad:number;
+  direccion: Direccion
+}
+
+interface Direccion{
+  pais: string,
+  casaNo: number
+}
+
 export const ObjetosLiterales = () => {
-  const persona = {
+  const persona:Persona = {    
+    nombreCOmpleto:'Fernando F',
     nombre:'Fernando',
     edad:35,
     direccion:{
@@ -7,12 +20,6 @@ export const ObjetosLiterales = () => {
       casaNo:5
     }
   }
-
-
-
-
-
-
   return (
     <>
       <h3>Objetos Literales</h3>
