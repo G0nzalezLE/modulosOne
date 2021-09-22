@@ -20,15 +20,28 @@ export const useUsuarios = () => {
     });
     if (resp.data.data.length > 0) {
       setUsuarios(resp.data.data);
-      paginaRef.current++;
+      
     } else {
       alert('No hay mas');
     }
   }
 
-  return {
-    cargarUsuarios,
-    usuarios    
+  const paginaSiguiente = () =>{
+    paginaRef.current++;
+    cargarUsuarios();
+  }
+
+  const pasinaAnterior =()=>{
+    if (paginaRef.current>1) {
+      paginaRef.current--;
+      cargarUsuarios();
+    }
+  }
+
+  return {    
+    usuarios,
+    paginaSiguiente,
+    pasinaAnterior
   }
 }
 

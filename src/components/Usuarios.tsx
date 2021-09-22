@@ -4,7 +4,8 @@ import { Usuario } from '../interfaces/reqRes';
 
 export const Usuarios = () => {
 
-  const {usuarios,cargarUsuarios} = useUsuarios();
+  const { usuarios, paginaSiguiente,
+    pasinaAnterior} = useUsuarios();
   const renderItems = ({id,first_name,last_name,email,avatar}:Usuario)=>{
     return(
       <tr key={id.toString()}>
@@ -42,11 +43,21 @@ export const Usuarios = () => {
         </tbody>
       </table>
       <button 
-        className="btn btn-primary"
-        onClick={cargarUsuarios}
+        className="btn btn-primary"       
+        onClick={paginaSiguiente}
         >
         Next
       </button>
+
+      <button
+        className="btn btn-primary"
+        onClick={pasinaAnterior}
+      >
+        Anterior
+      </button>
+
+
+
     </>
   )
 }
